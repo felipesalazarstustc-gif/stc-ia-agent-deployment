@@ -1,0 +1,18 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: k8s-node-agent
+spec:
+  replicas: 3 
+  selector:
+    matchLabels:
+      role: monitor-ia
+  template:
+    metadata:
+      labels:
+        role: monitor-ia
+    spec:
+      containers:
+      - name: node-container
+        image: agent-node-image:v1
+        imagePullPolicy: Never
