@@ -1,4 +1,3 @@
-// Agente de monitoreo IA
 console.log(">>> Sistema de IA en Node.js Activo");
 
 function procesarDatos() {
@@ -7,5 +6,4 @@ function procesarDatos() {
     console.log(`[IA-Node]: ${tareaRandom}...`);
 }
 
-// Ejecutar cada 12 segundos
 setInterval(procesarDatos, 12000);
